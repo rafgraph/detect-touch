@@ -1,4 +1,6 @@
-export function detectTouch() {
+'use strict';
+
+function detectTouch() {
   if (
     'ontouchstart' in window ||
     window.navigator.maxTouchPoints > 0 ||
@@ -11,4 +13,5 @@ export function detectTouch() {
   }
 }
 
-export default detectTouch();
+exports.detectTouch = detectTouch;
+exports.hasTouch = detectTouch();
