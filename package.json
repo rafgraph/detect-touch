@@ -1,0 +1,16 @@
+{
+  "name": "detect-touch",
+  "version": "1.0.0",
+  "description": "Detects if a device has a touch interface",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafrex/detect-touch.git"
+  },
+  "author": "Rafael Pedicini <code@rafrex.com> (http://www.rafrex.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafrex/detect-touch/issues"
+  },
+  "homepage": "https://github.com/rafrex/detect-touch#readme"
+}
