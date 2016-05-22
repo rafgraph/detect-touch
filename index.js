@@ -1,12 +1,14 @@
 'use strict';
 
 function detectTouch() {
-  return !!(
-    'ontouchstart' in window ||
-    window.navigator.maxTouchPoints > 0 ||
-    window.navigator.msMaxTouchPoints > 0 ||
-    window.DocumentTouch && document instanceof DocumentTouch
-  );
+  if (typeof window !== 'undefined') {
+    return Boolean(
+      'ontouchstart' in window ||
+      window.navigator.maxTouchPoints > 0 ||
+      window.navigator.msMaxTouchPoints > 0 ||
+      window.DocumentTouch && document instanceof DocumentTouch
+    );
+  }
 }
 
 exports.detectTouch = detectTouch;
