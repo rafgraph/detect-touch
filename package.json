@@ -1,0 +1,27 @@
+{
+  "name": "detect-touch-live-test",
+  "version": "1.0.0",
+  "description": "GitHub Pages site for live touch detection test using the detect-touch npm package.",
+  "main": "index.js",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafrex/detect-touch.git"
+  },
+  "author": "Rafael Pedicini <code@rafrex.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafrex/detect-touch/issues"
+  },
+  "homepage": "https://github.com/rafrex/detect-touch#readme",
+  "dependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "detect-touch": "^1.0.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1"
+  }
+}
