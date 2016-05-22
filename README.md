@@ -5,6 +5,13 @@
 
 `detect-touch` will detect if a device has a touch interface. It provides both a boolean one time touch detection on import, as well as a function to run the touch detection at any time.
 
+`detect-touch` will detect touch devices that implement:
+- The standard W3C Touch Events (this is a vast majority of touch devices)
+- Microsoft's Pointer Events
+- Firefox's legacy `documentTouch` which is now obsolete
+
+For details see the [detection tests](#detection-tests) section below.
+
 Better than Modernizr's touch device detection, which only detects support for the W3C Touch Events API, and leaves detection of Microsoft's Pointer Events API to a different category (and even then it fails to detect if the `pointerType` is touch or something else), which is frustrating, because all we really want is to know is if a device has a touch interface or not.
 
 WARNING: There is no absolute way to detect a touch interface,  and `detect-touch` will not correctly detect a touch interface 100% of the time, but very close to it, try the [live touch detection test][liveTest] with different devices to test out its reliability. Also, just because a device has a touch interface doesn't mean that it doesn't have a mouse as well (this is why you should only set touch event listeners in addition to click event listeners, but never instead of click event listeners).
@@ -58,3 +65,6 @@ detectTouch() === true;
 // or
 detectTouch() === false;
 ```
+
+&nbsp;
+## Detection Tests
