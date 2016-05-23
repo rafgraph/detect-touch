@@ -1,7 +1,7 @@
 # Detect Touch Devices
 &nbsp;
 
-[Live touch detection test][liveTest]  
+[Live touch detection test][liveTest] &nbsp; -- &nbsp; [view on npm][onNpm]
 
 `detect-touch` will detect if a device has a touch interface. It provides both a boolean one time touch detection on import, as well as a function to run the touch detection at any time.
 
@@ -10,6 +10,7 @@ Better than Modernizr's touch device detection, which only detects support for t
 WARNING: There is no absolute way to detect a touch interface,  and `detect-touch` will not correctly detect a touch interface 100% of the time, but very close to it, try the [live touch detection test][liveTest] with different devices to test out its reliability. Also, just because a device has a touch interface doesn't mean that it doesn't have a mouse as well.
 
 [liveTest]: http://detect-touch.rafrex.com
+[onNpm]: https://www.npmjs.com/package/detect-touch
 
 &nbsp;
 ## Installing `detect-touch`
