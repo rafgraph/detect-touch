@@ -88,21 +88,25 @@
 	    ),
 	    _react2.default.createElement(
 	      'div',
+	      { id: 'npm' },
+	      _react2.default.createElement(
+	        'code',
+	        null,
+	        '$ npm install --save detect-touch'
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
 	      null,
 	      _react2.default.createElement(
 	        'a',
-	        { href: 'https://github.com/rafrex/detect-touch' },
+	        { id: 'repo-link', href: 'https://github.com/rafrex/detect-touch' },
 	        'https://github.com/rafrex/detect-touch'
 	      )
 	    ),
 	    _react2.default.createElement(
-	      'code',
-	      { id: 'npm' },
-	      '$ npm install --save detect-touch'
-	    ),
-	    _react2.default.createElement(
 	      'h2',
-	      null,
+	      { style: _detectTouch.hasTouch ? { color: 'green' } : { color: 'red' } },
 	      _react2.default.createElement(
 	        'code',
 	        null,
@@ -115,17 +119,21 @@
 	    _react2.default.createElement(
 	      'h3',
 	      null,
-	      'Here are the results of the touch interface tests:'
+	      'Touch interface test results:'
 	    ),
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'touch-test' },
 	      _react2.default.createElement(
-	        'h4',
+	        'div',
 	        null,
 	        'Test for the standard W3C Touch Events API (vast majority of touch devices):'
 	      ),
-	      runTest("'ontouchstart' in window")
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'test-result' },
+	        runTest("'ontouchstart' in window")
+	      )
 	    ),
 	    _react2.default.createElement(
 	      'div',
@@ -137,12 +145,12 @@
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'test-result' },
 	        runTest("window.navigator.maxTouchPoints")
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'test-result' },
 	        runTest("window.navigator.msMaxTouchPoints")
 	      )
 	    ),
@@ -154,7 +162,11 @@
 	        null,
 	        'Test for Firefox\'s legacy touch implemntation (which is now obsolete):'
 	      ),
-	      runTest("window.DocumentTouch && document instanceof DocumentTouch")
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'test-result' },
+	        runTest("window.DocumentTouch && document instanceof DocumentTouch")
+	      )
 	    )
 	  );
 	}
