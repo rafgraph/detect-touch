@@ -36,7 +36,11 @@ function App() {
       </div>
 
       <div className="touch-test">
-        <h4>Tests for Microsoft's Pointer Events API running on a touch device:</h4>
+        <h4>
+          Tests for number of touch points (required to detect Microsoft's
+          Pointer Events API running on a touch device, however, devices not
+          implmenting Pointer Events may also indicate this):
+        </h4>
         <div className="test-result">{runTest("window.navigator.maxTouchPoints")}</div>
         <div className="test-result">{runTest("window.navigator.msMaxTouchPoints")}</div>
       </div>
