@@ -1,11 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
-import {hasTouch} from 'detect-touch';
+import { hasTouch } from 'detect-touch';
 
 function App() {
 
-  function toString(value) {
-    return typeof value === 'undefined' ? 'undefined' : value.toString();
+  function runTest(test) {
+    const result = eval(test);
+    const color = result ? 'green' : 'red';
+    const resultAsString =
+      typeof result === 'undefined' ? 'undefined' : result.toString();
+    return (
+      <code>{test}: <span style={{color: color}}>{resultAsString}</span></code>
+    );
   }
 
   return (
@@ -21,20 +27,21 @@ function App() {
         {hasTouch ? ' has a ' : ' does not have a '} touch interface.
       </h2>
       <h3>Here are the results of the touch interface tests:</h3>
+
       <div className="touch-test">
-        <code>'ontouchstart' in window: {toString('ontouchstart' in window)}</code>
-        <div className="note">Test for the standard W3C Touch Events implemntation of touch.</div>
+        <h4>Test for the standard W3C Touch Events API (vast majority of touch devices):</h4>
+        {runTest("'ontouchstart' in window")}
       </div>
 
       <div className="touch-test">
-        <div><code>window.navigator.maxTouchPoints: {toString(window.navigator.maxTouchPoints)}</code></div>
-        <div><code>window.navigator.msMaxTouchPoints: {toString(window.navigator.msMaxTouchPoints)}</code></div>
-        <div className="note">Pointer events test for Microsoft Internet Explorer and Edge.</div>
+        <h4>Tests for Microsoft's Pointer Events API running on a touch device:</h4>
+        <div>{runTest("window.navigator.maxTouchPoints")}</div>
+        <div>{runTest("window.navigator.msMaxTouchPoints")}</div>
       </div>
 
       <div className="touch-test">
-        <code>window.DocumentTouch && document instanceof DocumentTouch: {toString(window.DocumentTouch && document instanceof DocumentTouch)}</code>
-        <div className="note">Test for legacy Firefox implemntation which is now obsolete.</div>
+        <h4>Test for Firefox's legacy touch implemntation (which is now obsolete):</h4>
+        {runTest("window.DocumentTouch && document instanceof DocumentTouch")}
       </div>
     </div>
 
