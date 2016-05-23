@@ -67,7 +67,7 @@ The standard [W3C Touch Events API][w3cTE] (this is the vast majority of touch d
 ```javascript
 'ontouchstart' in window
 ```
-[Microsoft's Pointer Events API running on a touch device][maxTP], by checking for:
+Number of touch points (required to detect [Microsoft's Pointer Events API running on a touch device][maxTP], however, devices not implementing Pointer Events may also indicate this), by checking for:
 ```javascript
 window.navigator.maxTouchPoints > 0 ||
 window.navigator.msMaxTouchPoints > 0 // pre IE 11
