@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { hasTouch } from 'detect-touch';
+import 'current-input';
 
 function App() {
 
