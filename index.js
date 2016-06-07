@@ -4,14 +4,12 @@ import { hasTouch } from 'detect-touch';
 import 'current-input';
 
 function App() {
-
-  function runTest(test) {
-    const result = eval(test);
+  function runTest(test, result) {
     const color = result ? 'green' : 'red';
     const resultAsString =
       typeof result === 'undefined' ? 'undefined' : result.toString();
     return (
-      <code>{test}: <span style={{color: color}}>{resultAsString}</span></code>
+      <code>{test}: <span style={{ color }}>{resultAsString}</span></code>
     );
   }
 
@@ -24,7 +22,7 @@ function App() {
         https://github.com/rafrex/detect-touch
       </a></div>
 
-      <h2 style={hasTouch ? {color: 'green'} : {color: 'red'}}>
+      <h2 style={hasTouch ? { color: 'green' } : { color: 'red' }}>
         <code>detect-touch</code> determined that this device
         {hasTouch ? ' has a ' : ' does not have a '} touch interface.
       </h2>
@@ -33,7 +31,9 @@ function App() {
 
       <div className="touch-test">
         <div>Test for the standard W3C Touch Events API (vast majority of touch devices):</div>
-        <div className="test-result">{runTest("'ontouchstart' in window")}</div>
+        <div className="test-result">
+          {runTest('\'ontouchstart\' in window', 'ontouchstart' in window)}
+        </div>
       </div>
 
       <div className="touch-test">
@@ -42,13 +42,20 @@ function App() {
           Pointer Events API running on a touch device, however, devices not
           implmenting Pointer Events may also indicate this):
         </h4>
-        <div className="test-result">{runTest("window.navigator.maxTouchPoints")}</div>
-        <div className="test-result">{runTest("window.navigator.msMaxTouchPoints")}</div>
+        <div className="test-result">
+          {runTest('window.navigator.maxTouchPoints', window.navigator.maxTouchPoints)}
+        </div>
+        <div className="test-result">
+          {runTest('window.navigator.msMaxTouchPoints', window.navigator.msMaxTouchPoints)}
+        </div>
       </div>
 
       <div className="touch-test">
         <h4>Test for Firefox's legacy touch implemntation (which is now obsolete):</h4>
-        <div className="test-result">{runTest("window.DocumentTouch && document instanceof DocumentTouch")}</div>
+        <div className="test-result">
+          {runTest('window.DocumentTouch && document instanceof DocumentTouch',
+            window.DocumentTouch && document instanceof DocumentTouch)}
+        </div>
       </div>
     </div>
 
