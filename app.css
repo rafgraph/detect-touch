@@ -30,7 +30,6 @@ body {
 /*root div in index.html*/
 #root {
   min-height: 100vh;
-  min-width: 100vw;
   background-color: #f0f0f0;
 }
 
