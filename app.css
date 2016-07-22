@@ -11,6 +11,12 @@ html, body, div, span, a, h1, h2, h3, h4, code {
   background: transparent;
 }
 
+#deprecation {
+  font-size: 24px;
+  font-style: italic;
+  margin: 10px 0 20px 0;
+}
+
 html {
   background-color: rgb(0, 120, 0);
 }

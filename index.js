@@ -15,6 +15,9 @@ function App() {
 
   return (
     <div>
+      <div id="deprecation">
+        ***This has been deprecated in favor of <code style={{ fontSize: '24px' }}><a href="https://github.com/rafrex/detect-it">detect-it</a></code>***
+      </div>
       <h1>Touch Device Detection</h1>
       <div id="npm"><code>$ npm install --save detect-touch</code></div>
 
