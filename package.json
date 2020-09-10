@@ -5,12 +5,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/detect-touch.git"
+    "url": "git+https://github.com/rafgraph/detect-touch.git"
   },
-  "author": "Rafael Pedicini <code@rafrex.com> (http://www.rafrex.com)",
+  "author": "Rafael Pedicini <rafael@rafgraph.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rafrex/detect-touch/issues"
+    "url": "https://github.com/rafgraph/detect-touch/issues"
   },
-  "homepage": "https://github.com/rafrex/detect-touch#readme"
+  "homepage": "https://github.com/rafgraph/detect-touch#readme"
 }

@@ -1,5 +1,5 @@
 ---
-### *This has been deprecated in favor of [Detect It](https://github.com/rafrex/detect-it)*
+### *This has been deprecated in favor of [Detect It](https://github.com/rafgraph/detect-it)*
 ---
 # Detect Touch Devices
 &nbsp;
@@ -8,7 +8,7 @@
 
 `detect-touch` will detect if a device has a touch interface. It provides both a boolean one time touch detection on import, as well as a function to run the touch detection at any time.
 
-[liveTest]: http://detect-touch.rafrex.com
+[liveTest]: https://detect-touch.rafgraph.dev
 
 &nbsp;
 ## Installing `detect-touch`
