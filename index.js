@@ -16,13 +16,13 @@ function App() {
   return (
     <div>
       <div id="deprecation">
-        ***This has been deprecated in favor of <code style={{ fontSize: '24px' }}><a href="https://github.com/rafrex/detect-it">detect-it</a></code>***
+        ***This has been deprecated in favor of <code style={{ fontSize: '24px' }}><a href="https://github.com/rafgraph/detect-it">detect-it</a></code>***
       </div>
       <h1>Touch Device Detection</h1>
       <div id="npm"><code>$ npm install --save detect-touch</code></div>
 
-      <div><a id="repo-link" href="https://github.com/rafrex/detect-touch">
-        https://github.com/rafrex/detect-touch
+      <div><a id="repo-link" href="https://github.com/rafgraph/detect-touch">
+        https://github.com/rafgraph/detect-touch
       </a></div>
 
       <h2 style={hasTouch ? { color: 'green' } : { color: 'red' }}>
